@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Systems Voltage Construction - Professional Electrical Services</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f8f9fa;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    /* Navigation */
+    nav {
+      background: #fff;
+      padding: 1rem 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background: #2a5298;
+      color: white;
+    }
+
+    /* Main Content */
+    main {
+      padding: 2rem 0;
+    }
+
+    section {
+      margin-bottom: 4rem;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      color: #1e3c72;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: #2a5298;
+      margin: 1rem auto;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .about-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .service-card {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border-left: 4px solid #2a5298;
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-card h3 {
+      color: #1e3c72;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Project Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .project-item {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+    .project-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-bottom: 3px solid #2a5298;
+    }
+
+    .project-info {
+      padding: 1.5rem;
+    }
+
+    .project-info h3 {
+      color: #1e3c72;
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+    }
+
+    .project-info p {
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    /* Contact Section */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .contact-card {
+      background: #1e3c72;
+      color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .contact-card h3 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #1e3c72;
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 3rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>SYSTEMS VOLTAGE CONSTRUCTION</h1>
+      <p>Professional Electrical Construction & Engineering Services</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <section id="about">
+        <h2>About Systems Voltage Construction</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>We are a trusted electrical contracting company providing reliable, safe, and cost-effective electrical solutions for residential, commercial, and industrial projects.</p>
+            
+            <p>We pride ourselves on delivering reliable, efficient, and cost-effective electrical solutions that meet the highest industry standards.</p>
+          </div>
+          <div class="about-text">
+            <h3 style="color: #1e3c72; margin-bottom: 1rem;">Our Mission</h3>
+            <p>To provide exceptional electrical construction services that power communities and businesses with safe, reliable, and innovative electrical solutions.</p>
+            
+           
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Power Distribution Systems</h3>
+            <p>Design and installation of electrical distribution panels, switchgear, and power distribution networks for commercial and industrial facilities.</p>
+          </div>
+          <div class="service-card">
+            <h3>Electrical Infrastructure</h3>
+            <p>Complete electrical infrastructure development including wiring, conduit installation, and electrical system upgrades.</p>
+          </div>
+          <div class="service-card">
+            <h3>Control Systems</h3>
+            <p>Installation and maintenance of electrical control systems, automation equipment, and industrial control panels.</p>
+          </div>
+          <div class="service-card">
+            <h3>Fire Alarm & Safety Systems</h3>
+            <p>24/7 emergency electrical repair services to ensure your operations remain uninterrupted.</p>
+          </div>
+          <div class="service-card">
+            <h3>System Maintenance</h3>
+            <p>Preventive maintenance and regular inspections to ensure optimal performance and safety of electrical systems.</p>
+          </div>
+          <div class="service-card">
+            <h3> Cad Design</h3>
+            <p>Professional electrical engineering system design services.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem; color: #666;">
+          Browse through our portfolio of completed electrical construction projects showcasing our expertise and commitment to quality.
+        </p>
+        
+        <div class="gallery">
+          <div class="project-item">
+            <img src="assets/Picture2.jpg" alt="Electrical Panel Installation">
+            <div class="project-info">
+              <h3>Bernardino General Hospital</h3>
+              <p>High-capacity electrical distribution panel installation for commercial facility.</p>
+            </div>
+          </div>
+          
+          <div class="project-item">
+            <img src="assets/Picture3.jpg" alt="Power Distribution System">
+            <div class="project-info">
+              <h3>Power Distribution System</h3>
+              <p>Complete power distribution network setup with advanced monitoring capabilities.</p>
+            </div>
+          </div>
+          
+          <div class="project-item">
+            <img src="assets/Picture7.jpg" alt="Industrial Wiring Project">
+            <div class="project-info">
+              <h3>Industrial Wiring Project</h3>
+              <p>Comprehensive industrial wiring solution for manufacturing facility.</p>
+            </div>
+          </div>
+          
+        
+          
+          <div class="project-item">
+            <img src="assets/Picture9.jpg" alt="Electrical Maintenance">
+            <div class="project-info">
+              <h3>System Maintenance & Upgrades</h3>
+              <p>Preventive maintenance and system upgrades for optimal performance.</p>
+            </div>
+          </div>
+          
+          <div class="project-item">
+            <img src="assets/Picture7.jpg" alt="Commercial Installation">
+            <div class="project-info">
+              <h3>Commercial Electrical Installation</h3>
+              <p>Large-scale commercial electrical installation with modern technology.</p>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <img src="assets/Picture29.jpg" alt="Project Completion">
+            <div class="project-info">
+              <h3>Project Completion & Testing</h3>
+              <p>Final system testing and commissioning for project completion.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem;">
+           Get in touch with us today.
+        </p>
+        
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>📞 Phone</h3>
+            <p>Call us for immediate assistance</p>
+            <p><strong>+63 908 315 5563</strong></p>
+          </div>
+          
+          <div class="contact-card">
+            <h3>📧 Email</h3>
+            <p>Send us your project details</p>
+            <p><strong>mannysvc8@gmail.com</strong></p>
+          </div>
+          
+
+          <div class="contact-card">
+            <h3>⏰ Hours</h3>
+            <p>Business & Emergency Hours</p>
+            <p><strong>Mon-Fri: 7AM-6PM<br>24/7</strong></p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Systems Voltage Construction. All rights reserved. | Licensed & Insured Electrical Contractors</p>
+    </div>
+  </footer>
+</body>
+</html>s
